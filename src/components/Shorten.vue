@@ -28,7 +28,7 @@
     @Component
     export default class Shorten extends Vue {
         url:string = '';
-        baseURL:string = `${domain.substring(0, domain.lastIndexOf('/'))}/`;
+        baseURL:string = `${domain.substring(0, domain.lastIndexOf('/')).replace('#', '')}/`;
         showShortenedURL:boolean = false;
         shortenData:object = {};
 
@@ -36,7 +36,7 @@
         processForm () {
             const self = this;
             console.log(`${this.url} submitted`);
-            axios.post('/api/shorten/', {
+            axios.post('/api/shorten', {
                 originalURL: this.url
             }).then(function (res) {
                 console.log(res.data);
