@@ -7,7 +7,10 @@
                         <h1 class="title">
                             <span>Wuffs<small>.dev</small></span>
                         </h1>
-                        <h2 class="subtitle">Welcome to Wuffs.dev link shortener</h2>
+                        <h2 class="subtitle">Oops, something's wrong...</h2>
+                        <h2 class="subtitle" v-if="invalidURL">We were unable to find the URL you clicked, it may have been
+                            deleted or
+                            never existed</h2>
                         <Shorten/>
                     </div>
                 </div>
