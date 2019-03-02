@@ -36,7 +36,7 @@
         processForm () {
             const self = this;
             console.log(`${this.url} submitted`);
-            axios.post('/api/shorten', {
+            axios.post('/api/shorten/', {
                 originalURL: this.url
             }).then(function (res) {
                 console.log(res.data);
