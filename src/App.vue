@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="has-background-info is-fullheight">
+    <div id="app">
         <router-view/>
     </div>
 </template>

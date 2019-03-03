@@ -5,7 +5,7 @@
                                                                        readonly :value="baseURL + shortenData.urlCode">
         </div>
         <div class="box">
-            <form @submit.prevent="processForm">
+            <form @submit.prevent="shortenForm">
                 <div class="field is-grouped">
                     <p class="control is-expanded">
                         <input class="input" type="url" placeholder="Enter a URL to shorten" name="url" v-model="url">
@@ -33,7 +33,7 @@
         shortenData:object = {};
 
 
-        processForm () {
+        shortenForm () {
             const self = this;
             console.log(`${this.url} submitted`);
             axios.post('/api/shorten', {
