@@ -29,12 +29,9 @@
     import axios from 'axios';
     import validURL from 'valid-url';
 
-    const domain = document.URL;
-
     @Component
     export default class Shorten extends Vue {
         url: string = '';
-        // baseURL:string = `${domain.substring(0, domain.lastIndexOf('/')).replace('#', '')}`;
         baseURL: string = `https://wuffs.dev/`;
         showShortenedURL: boolean = false;
         shortenData: object = {};
